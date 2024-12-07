@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Genres - Movie Website</title>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Movie Website</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
+</head>
+
+    <body>
+        <nav class="navbar">
+            <div class="navbar-logo">Movie Website Demo</div>
+            <div class="navbar-toggle" id="mobile-menu">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+            <ul class="navbar-menu">
+                <li><a href="index.html">Home</a></li>           
+                <li><a href="movies.html">Movie</a></li>
+                <li><a href="genres.html">Genres</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+        <style>
+            /* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: #0905f3;
+    color: #fff;
+}
+
+.navbar-logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.navbar-menu {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+.navbar-menu li a {
+    text-decoration: none;
+    color: #fff;
+    padding: 5px 10px;
+    transition: background 0.3s;
+}
+
+.navbar-menu li a:hover {
+    background-color: #0018f3;
+    border-radius: 5px;
+}
+
+/* Mobile Menu Toggle */
+.navbar-toggle {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+}
+
+.bar {
+    height: 3px;
+    width: 25px;
+    background-color: #fff;
+    margin: 3px 0;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .navbar-menu {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        background-color: #0056f5fd;
+        position: absolute;
+        top: 60px;
+        left: 0;
+    }
+
+    .navbar-menu.active {
+        display: flex;
+    }
+
+    .navbar-menu li {
+        text-align: center;
+        padding: 10px 0;
+    }
+
+    .navbar-toggle {
+        display: flex;
+    }
+}
+
+        </style>
+
+  
+    <script>
+        
+        const mobileMenu = document.getElementById('mobile-menu');
+const navbarMenu = document.querySelector('.navbar-menu');
+
+mobileMenu.addEventListener('click', () => {
+    navbarMenu.classList.toggle('active');
+});
+
+
+    </script>
+   
+    <!-- Genres Section -->
+    <section class="genres">
+        <h2>Explore Movie Genres</h2>
+        <div class="genres-container">
+            <div class="genre-card">
+                <h2>Action</h2>
+                <p>Explosive, high-energy movies filled with physical feats and intense combat.</p>
+                <a href="action.html" class="genre-link">Explore Action Movies</a>
+            </div>
+            <div class="genre-card">
+                <h2>Comedy</h2>
+                <p>Light-hearted movies that aim to entertain and make you laugh.</p>
+                <a href="comedy.html"class="genre-link">Explore ComedyMovies</a>
+            </div>
+            <div class="genre-card">
+                <h2>Drama</h2>
+                <p>Movies that deal with realistic storytelling and emotional themes.</p>
+                <a href="drama.html" class="genre-link">Explore Drama Movies</a>
+            </div>
+         
+        </div>
+    </section>
+
+    <style>
+        
+/* Navbar Styling */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #0004ff;
+    color: #fff;
+    padding: 10px 20px;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+/* Genres Section */
+.genres {
+    padding: 40px;
+    text-align: center;
+    background-color: #fff;
+}
+
+.genres h2 {
+    font-size: 30px;
+    margin-bottom: 30px;
+}
+
+.genres-container {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.genre-card {
+    background-color: #eee;
+    width: 250px;
+    margin: 20px;
+    padding: 20px;
+    text-align: center;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(231, 229, 229, 0.1);
+}
+
+.genre-card h3 {
+    font-size: 22px;
+    margin-bottom: 15px;
+}
+
+.genre-card p {
+    font-size: 14px;
+    margin-bottom: 20px;
+    color: #777;
+}
+
+.genre-link {
+    text-decoration: none;
+    background-color: #070ad6;
+    color: #fff;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+.genre-link:hover {
+    background-color: #0036e6;
+}
+
+
+
+
+/* General Styling for Body */
+
+.content {
+            text-align: center;
+            padding: 50px;
+        }
+        /* Footer Styles */
+        .footer {
+            background-color: #0026ff;
+            color: #fff;
+            padding: 20px 0;
+        }
+        .footer-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        .footer-column {
+            flex: 1;
+            margin: 10px;
+            min-width: 250px;
+        }
+        .footer-column h3 {
+            margin-bottom: 15px;
+            font-size: 18px;
+            border-bottom: 2px solid #fff;
+            display: inline-block;
+            padding-bottom: 5px;
+        }
+        .footer-column ul {
+            list-style: none;
+            padding: 0;
+        }
+        .footer-column ul li {
+            margin: 5px 0;
+        }
+        .footer-column ul li a {
+            text-decoration: none;
+            color: #fff;
+            transition: color 0.3s;
+        }
+        .footer-column ul li a:hover {
+            color: #ffffff;
+        }
+        .social-icons a {
+            margin-right: 10px;
+            display: inline-block;
+        }
+        .social-icons a img {
+            width: 25px;
+            height: 25px;
+            filter: brightness(0) invert(1);
+            transition: transform 0.3s;
+        }
+        .social-icons a:hover img {
+            transform: scale(1.2);
+        }
+        .footer-bottom {
+            text-align: center;
+            margin-top: 20px;
+            font-size: 14px;
+            color: #fffcfc;
+        }
+        /* Responsive Styles */
+        @media (max-width: 768px) {
+            .footer-container {
+                flex-direction: column;
+                align-items: center;
+                text-align: center;
+            }
+        }
+    </style>
+
+        
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-column">
+               
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024 Movie Website Demo | All Rights Reserved</p>
+        </div>
+    </footer> 
+   
+</body>
+</html>
